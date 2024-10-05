@@ -1,0 +1,11 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+}
+* {
+    font-family: Poppins-Medium;
+}

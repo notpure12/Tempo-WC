@@ -1,0 +1,38 @@
+a {
+  text-decoration: none;
+}
+.UP {
+  color: #8d38c9;
+}
+.nav-h1 {
+  color: white;
+  font-family: "Poppins-Black";
+}
+.emo-history {
+  color: white;
+  font-size: 1.25rem;
+  font-family: "Poppins-Bold";
+}
+.emo-history:hover {
+  color: wheat;
+}
+.nav-wrapper {
+  position: fixed;
+  display: flex;
+  background: #ee875a;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding-left: 2%;
+  padding-right: 2%;
+  box-shadow: 1px 1px 1px 1px lightgray;
+  z-index: 100;
+}
+.nav-group-item {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+}

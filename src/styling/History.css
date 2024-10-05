@@ -1,0 +1,51 @@
+.History-wrapper {
+    padding-top: 80px;
+    background: #fff2ed;
+    display: flex;
+    height: 320vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.chart-card-wrapper{
+    margin-top: 1rem;
+    border: none;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 2px 2px lightgray;
+    width: 37rem;
+    display: flex;
+    height: 26rem;
+    flex-direction: column;
+    align-items: center;
+}
+.chart-card-header {
+    display: flex;
+    padding: 3rem;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+.chart-card-content {
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+}
+.chart-card-content-chart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+.chart-card-content-statistic{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+}
+.chart-card-header-datepicker {
+    width: 5.3rem;
+    cursor: pointer;
+}
