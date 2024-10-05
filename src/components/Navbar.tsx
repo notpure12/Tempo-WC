@@ -1,8 +1,17 @@
+// src/components/Navbar.tsx
 import "../styling/Navbar.css";
-import '../assets/fonts/fonts.css'
+import '../assets/fonts/fonts.css';
 import userIcon from "../assets/img/Frame.svg";
 import { Link } from "react-router-dom";
+import { useAuth } from '../context/Authcontext';
+
 const Navbar = () => {
+  const { user, logout } = useAuth();
+
+  const handleLogin = () => {
+    window.location.href = 'http://localhost:3000/login';
+  };
+
   return (
     <nav className="nav-wrapper">
       <div className="nav-logo">
@@ -13,8 +22,8 @@ const Navbar = () => {
           <Link to="/history"><h1 className="emo-history">Emotion History</h1></Link>
         </li>
         <li className="nav-group-item2">
-          <a href="/">
-            <img src={userIcon} width={50}height={50}></img>
+          <a href="/" onClick={user ? logout : handleLogin}>
+            <img src={userIcon} width={50} height={50} alt="User Icon" />
           </a>
         </li>
       </ul>

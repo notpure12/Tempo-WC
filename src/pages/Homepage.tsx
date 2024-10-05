@@ -5,13 +5,14 @@ import WordCloud from "react-d3-cloud";
 import data from "../assets/data/data.json";
 import ReactSelect, { SingleValue } from "react-select";
 import "react-datepicker/dist/react-datepicker.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import Smlvertor from "../assets/img/icon-park-solid_emotion-happy.svg";
 import Modalcontent from "../components/Modalcontent";
 import * as htmlToImage from "html-to-image";
 import axios from "axios";
 import { FacebookShareButton, FacebookIcon } from 'react-share';
+import { useAuth } from "../context/Authcontext";
 
 interface OptionType {
   value: string;
@@ -24,6 +25,16 @@ interface Word {
 }
 
 const Homepage = () => {
+  const { login } = useAuth();
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+
+    if (token) {
+      login(token); // Set the token in the context and local storage
+      window.history.replaceState({}, document.title, window.location.pathname); // Clean up URL
+    }
+  }, [login]);
   const options = [
     { value: "up", label: "UP Word Cloud" },
     { value: "se", label: "SE Word Cloud" },
